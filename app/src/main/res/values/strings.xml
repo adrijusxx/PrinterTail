@@ -3,6 +3,7 @@
     <string name="conctacts_will_be_soon">Conctacts will be soon</string>
     <string name="welcome_guys">Welcome Guys</string>
     <string name="contacts">contacts</string>
+    <string name="entries">entries</string>
     <string name="calculate_the_till">Calculate the Till</string>
     <string name="view_register">View Register</string>
     <string name="enter_amount">Enter Amount</string>
@@ -19,4 +20,7 @@
     <string name="_2">2:</string>
     <string name="visa_total">Visa Total</string>
     <string name="just_a_window_for_amount_of_money">Just a window for amount of money</string>
+    <string name="title_activity_entries">EntriesActivity</string>
+    <string name="large_text">Latest entries of money counting</string>
+    <string name="action_settings">Settings</string>
 </resources>
