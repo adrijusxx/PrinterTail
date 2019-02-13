@@ -8,10 +8,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.printertail.Controller.DatabaseHelper;
 import com.example.user.printertail.R;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    DatabaseHelper myDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,11 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         {
             Button Calculate;
 
             Calculate = (Button) findViewById(R.id.buttonCalculate);
-
+            myDB = new DatabaseHelper(this);
 
 
             Calculate.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +48,17 @@ public class MainActivity extends AppCompatActivity {
                     TextView windowforCheque = (TextView) findViewById(R.id.windowcheque);
                     TextView totalVisa = (TextView) findViewById(R.id.visatotal);
                     TextView totalCash = (TextView) findViewById(R.id.cashtotal);
+
+
+                    String newEntry = totalmoney.getText().toString();
+                    if (totalmoney.length() != 0) {
+                        AddData(newEntry);
+                        totalmoney.setText("");
+                    } else {
+                        Toast.makeText(MainActivity.this, "field is missing", Toast.LENGTH_LONG).show();
+
+                    }
+
 
                     try{
                         if (windowfor50.getText().toString().trim().length() <= 0) {
@@ -100,9 +115,18 @@ public class MainActivity extends AppCompatActivity {
                                         }
 
 
-
                 }
             });
+        }
+    }
+
+    public void AddData(String newEntry) {
+        boolean insertData = myDB.addData(newEntry);
+        if (insertData == true) {
+            Toast.makeText(MainActivity.this, "entered", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(MainActivity.this, "wrong", Toast.LENGTH_LONG).show();
+
         }
     }
 }
