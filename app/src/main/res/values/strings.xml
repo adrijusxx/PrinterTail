@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Printer Tail</string>
+    <string name="conctacts_will_be_soon">Conctacts will be soon</string>
+    <string name="welcome_guys">Welcome Guys</string>
+    <string name="contacts">contacts</string>
+    <string name="calculate_the_till">Calculate the Till</string>
+    <string name="view_register">View Register</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="_20">20:</string>
+    <string name="_50">50:</string>
+    <string name="coins">Coins</string>
+    <string name="total">Total</string>
+    <string name="_5">5:</string>
+    <string name="cash_total">Cash Total</string>
+    <string name="_10">10:</string>
+    <string name="visa">Visa</string>
+    <string name="cheque">Cheque</string>
+    <string name="_1">1:</string>
+    <string name="_2">2:</string>
+    <string name="visa_total">Visa Total</string>
+    <string name="just_a_window_for_amount_of_money">Just a window for amount of money</string>
+</resources>
