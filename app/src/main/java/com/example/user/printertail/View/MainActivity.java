@@ -44,20 +44,13 @@ public class MainActivity extends AppCompatActivity {
                     EditText windowfor1 = (EditText) findViewById(R.id.window1);
                     EditText windowforCoins = (EditText) findViewById(R.id.windowcoins);
                     EditText windowforVisa = (EditText) findViewById(R.id.windowvisa);
-                    TextView totalmoney = (TextView) findViewById(R.id.total);
+                    TextView totalMoney = (TextView) findViewById(R.id.total);
                     TextView windowforCheque = (TextView) findViewById(R.id.windowcheque);
                     TextView totalVisa = (TextView) findViewById(R.id.visatotal);
                     TextView totalCash = (TextView) findViewById(R.id.cashtotal);
 
 
-                    String newEntry = totalmoney.getText().toString();
-                    if (totalmoney.length() != 0) {
-                        AddData(newEntry);
-                        totalmoney.setText("");
-                    } else {
-                        Toast.makeText(MainActivity.this, "field is missing", Toast.LENGTH_LONG).show();
 
-                    }
 
 
                     try{
@@ -104,11 +97,21 @@ public class MainActivity extends AppCompatActivity {
                                             final double SumCash = num50 + num20 + num10 + num5 + num2 + num1 + numCoins;
                                             final double SumVisa = numVisa;
 
-                                            totalmoney.setText(String.valueOf(Sum) + " €");
+                        totalMoney.setText(String.valueOf(Sum) + " €");
                                             totalCash.setText(String.valueOf(SumCash) + " €");
                                             totalVisa.setText(String.valueOf(SumVisa) + " €");
 
                                             Toast.makeText(getApplicationContext(), "Total money: " + Sum + "€", Toast.LENGTH_LONG).show();
+                        //0double newEntry = Double.parseDouble(totalMoney.getText().toString());
+                        String totalEntry = totalMoney.getText().toString();
+                        String cashEntry = totalCash.getText().toString();
+                        String visaEntry = totalVisa.getText().toString();
+                        if (totalMoney.length() != 0 && totalCash.length() != 0 && totalVisa.length() != 0) {
+                            AddData(totalEntry, cashEntry, visaEntry);
+                        } else {
+                            Toast.makeText(MainActivity.this, "field is missing", Toast.LENGTH_LONG).show();
+
+                        }
 
                                         }catch(Exception e){
                                             System.out.println("Catch Exception Error"); // Invalid input
@@ -120,8 +123,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void AddData(String newEntry) {
-        boolean insertData = myDB.addData(newEntry);
+    public void AddData(String newEntry, String secondEntry, String thirdEntry) {
+        boolean insertData = myDB.addData(newEntry, secondEntry, thirdEntry);
         if (insertData == true) {
             Toast.makeText(MainActivity.this, "entered", Toast.LENGTH_LONG).show();
         } else {

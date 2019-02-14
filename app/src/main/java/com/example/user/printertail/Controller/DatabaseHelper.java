@@ -12,6 +12,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String TABLE_NAME = "mylist_data";
     public static final String COL1 = "ID";
     public static final String COL2 = "ITEM1";
+    public static final String COL3 = "ITEM2";
+    public static final String COL4 = "ITEM3";
 
 
     public DatabaseHelper(Context context) {
@@ -21,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                " ITEM1 TEXT)";
+                " ITEM1 TEXT, ITEM2 TEXT, ITEM3 TEXT)";
         db.execSQL(createTable);
     }
 
@@ -31,11 +33,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean addData(String item1) {
+    public boolean addData(String item1, String item2, String item3) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL2, item1);
-
+        contentValues.put(COL3, item2);
+        contentValues.put(COL4, item3);
         long result = db.insert(TABLE_NAME, null, contentValues);
 
         //if date as inserted incorrectly it will return -1
