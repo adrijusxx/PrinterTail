@@ -22,9 +22,13 @@ public class EntriesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entries);
 
-        ListView listView = (ListView) findViewById(R.id.ListView);
+        ListView listView = (ListView) findViewById(R.id.textTotalCash);
+        ListView listView2 = (ListView) findViewById(R.id.textTotalVisa);
+        ListView listView3 = (ListView) findViewById(R.id.textTotalMoney);
         myDB = new DatabaseHelper(this);
         ArrayList<String> theList = new ArrayList<>();
+        ArrayList<String> theList2 = new ArrayList<>();
+        ArrayList<String> theList3 = new ArrayList<>();
         Cursor data = myDB.getListContents();
         String pounch;
 
@@ -33,8 +37,14 @@ public class EntriesActivity extends AppCompatActivity {
         } else {
             while (data.moveToNext()) {
                 theList.add(data.getString(1));
+                theList2.add(data.getString(2));
+                theList3.add(data.getString(3));
                 ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, theList);
+                ListAdapter listAdapter2 = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, theList2);
+                ListAdapter listAdapter3 = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, theList3);
                 listView.setAdapter(listAdapter);
+                listView2.setAdapter(listAdapter2);
+                listView3.setAdapter(listAdapter3);
             }
         }
     }
