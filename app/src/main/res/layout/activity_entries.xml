@@ -4,57 +4,39 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/test4"
 
-    <LinearLayout
-        android:id="@+id/listviewlayout"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/TextViewLayuot"
-        android:padding="10dp">
+        >
 
-        <ListView
-            android:id="@+id/textTotalCash"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <ListView
-            android:id="@+id/textTotalVisa"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <ListView
-            android:id="@+id/textTotalMoney"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/TextViewLayuot"
         android:layout_width="fill_parent"
         android:layout_height="45dip"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="5dip"
-        android:gravity="center"
+        android:background="@color/EntriesHeader"
+        android:gravity="top"
         android:orientation="horizontal">
+
 
         <TextView
             android:id="@+id/TotalMoney"
             android:layout_width="0dip"
             android:layout_height="40dip"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:text="Total"
+
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -62,8 +44,11 @@
             android:id="@+id/TotalCash"
             android:layout_width="0dip"
             android:layout_height="40dip"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:text="Cash"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -71,9 +56,80 @@
             android:id="@+id/TotalVisa"
             android:layout_width="0dip"
             android:layout_height="40dip"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:text="Visa"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Date"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/TextViewLayuot"
+        android:layout_margin="10dp"
+        android:id="@+id/listviewlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="630dp"
+        android:padding="10dp">
+
+
+        <ListView
+
+            android:id="@+id/textTotalCash"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:backgroundTint="@color/colorText"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/textTotalVisa"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/textTotalMoney"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/textData"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/footer"
+        android:layout_margin="5dp"
+        android:layout_below="@id/listviewlayout">
+
+
+    </FrameLayout>
 </RelativeLayout>

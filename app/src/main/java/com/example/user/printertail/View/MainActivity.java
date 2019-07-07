@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     TextView windowforCheque = (TextView) findViewById(R.id.windowcheque);
                     TextView totalVisa = (TextView) findViewById(R.id.visatotal);
                     TextView totalCash = (TextView) findViewById(R.id.cashtotal);
+                    TextView totalCheque = (TextView) findViewById(R.id.cheque1);
 
 
 
@@ -94,12 +95,14 @@ public class MainActivity extends AppCompatActivity {
                                             double numCheque = Double.parseDouble(windowforCheque.getText().toString());
 
                                             final double Sum = num50 + num20 + num10 + num5 + num2 + num1 + numCoins + numVisa + numCheque;
-                                            final double SumCash = num50 + num20 + num10 + num5 + num2 + num1 + numCoins;
+                        final double SumCash = num50 + num20 + num10 + num5 + num2 + num1 + numCoins + numCheque;
                                             final double SumVisa = numVisa;
+                        final double SumCheque = numCheque;
 
                         totalMoney.setText(String.valueOf(Sum) + " €");
                                             totalCash.setText(String.valueOf(SumCash) + " €");
                                             totalVisa.setText(String.valueOf(SumVisa) + " €");
+                        totalCheque.setText(String.valueOf(SumCheque) + " €");
 
                                             Toast.makeText(getApplicationContext(), "Total money: " + Sum + "€", Toast.LENGTH_LONG).show();
                         //0double newEntry = Double.parseDouble(totalMoney.getText().toString());

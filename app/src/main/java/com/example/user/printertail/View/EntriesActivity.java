@@ -29,6 +29,7 @@ public class EntriesActivity extends AppCompatActivity {
         ArrayList<String> theList = new ArrayList<>();
         ArrayList<String> theList2 = new ArrayList<>();
         ArrayList<String> theList3 = new ArrayList<>();
+
         Cursor data = myDB.getListContents();
         String pounch;
 

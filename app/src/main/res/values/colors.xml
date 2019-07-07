@@ -6,5 +6,10 @@
     <color name="colorText">#ffffff</color>
     <color name="colorTotal">#39d400</color>
     <color name="colorBlack">#a93737</color>
-    <color name="colorWindows">#7860645e</color>
+    <color name="colorWindows">#787AAF71</color>
+    <color name="colorGreen">#7855FF00</color>
+
+    <color name="colorOrange">#F7FF6F00</color>
+    <color name="EntriesHeader">#46FFFFFF</color>
+
 </resources>
