@@ -10,48 +10,28 @@
         android:id="@+id/LinearLayout01"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/test4"
-        android:orientation="horizontal">
+        android:background="@color/cardview_dark_background"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="305dp"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="Adress"
+            android:text="Coming soon"
             android:textAllCaps="true"
             android:textStyle="bold"
+
+            android:textColor="@color/colorText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="305dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Mobile Number"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="164dp"
-            android:layout_height="305dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:text="E-mail Adress"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
 

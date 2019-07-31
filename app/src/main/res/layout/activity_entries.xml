@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/test4"
+        android:background="@color/cardview_dark_background"
 
         >
 
@@ -22,7 +23,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="5dip"
-        android:background="@color/EntriesHeader"
+        android:background="@color/colorOrange"
+        app:backgroundTint="@color/colorOrange"
         android:gravity="top"
         android:orientation="horizontal">
 
@@ -39,6 +41,7 @@
             android:textColor="@color/colorText"
             android:textSize="20sp"
             android:textStyle="bold" />
+
 
         <TextView
             android:id="@+id/TotalCash"
@@ -64,17 +67,7 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/Date"
-            android:layout_width="0dip"
-            android:layout_height="40dip"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:text="Date"
-            android:textAlignment="center"
-            android:textColor="@color/colorText"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+
     </LinearLayout>
 
 
@@ -84,6 +77,7 @@
         android:id="@+id/listviewlayout"
         android:layout_width="fill_parent"
         android:layout_height="630dp"
+
         android:padding="10dp">
 
 
@@ -113,13 +107,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <ListView
-            android:id="@+id/textData"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
     </LinearLayout>
 
